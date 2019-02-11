@@ -20,6 +20,8 @@ docker run \
 docker run \
     --name $NAME_ASTERISK \
     --net=host \
+    -v asterisk-spool:/var/spool/asterisk/sounds/ \
+    -v /opt/asterisk/etc/:/etc/asterisk/ \
     -d -t dougbtv/asterisk
 
 # -----------------------------
